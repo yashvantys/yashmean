@@ -43,10 +43,11 @@ export class TodoComponent implements OnInit {
 
   ngOnInit() {
     const token = localStorage.getItem('token');
-    const tokenPayload = decode(token)
+    const tokenPayload = decode(token);
+    this.ajaxList()
   }
 
-  ajaxList(loggedInUserId, loggedInUserRole) {
+  ajaxList() {
     this.dtOptions = {
       responsive: true,
       pageLength: 10,

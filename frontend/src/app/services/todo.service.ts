@@ -6,7 +6,7 @@ import 'rxjs/Rx'
 
 @Injectable()
 export class TodoService {
-    path = environment.path + '/todo'
+    path = environment.path + '/'
     constructor(private http: HttpClient) { }
 
     getTodos() {

@@ -1,4 +1,4 @@
-const User = require('../../models/Todo.js');
+const Todo = require('../../models/Todo.js');
 
 // get All Todo list
 exports.todo_get_all = async (req, res, next) => {
@@ -26,19 +26,17 @@ exports.todo_get_all = async (req, res, next) => {
                     title: new RegExp(search, 'i')
                 }, {
                     description: new RegExp(search, 'i')
-                }, {
-                    email: new RegExp(search, 'i')
                 }]
             }
 
         var sortColumn = {}
         sortColumn[sort_column] = orderbyasc
         var todos = await Todo.find(query, '-__v').sort(sortColumn).limit(limit).skip(start)
-        var TotalTodos = await User.find(query).count({})
+        var TotalTodos = await Todo.find(query).count({})
         res.send({
             statusCode: 200,
             message: 'success',
-            users,
+            todos,
             recordsTotal: TotalTodos
         })
 
