@@ -1,0 +1,87 @@
+<!-- Header -->
+<header class="header">
+  <!-- Top Bar -->
+  <div class="top_bar">
+    <div class="top_bar_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+              <ul class="top_bar_contact_list">
+                <li>
+                  <div class="question">Have any query?</div>
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <div><a href="skype:yashvant.yadav?call" class="emaillink">+91-9642796505</a></div>
+                </li>
+                <li>
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  <div><a href="mailto:info@mstechnologys.com" class="emaillinktop">info@mstechnologys.com</a></div>
+                </li>
+              </ul>
+              <div class="top_bar_login ml-auto">
+                <div class="login_button"><a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Admin
+                    Login</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Content -->
+  <div class="header_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="header_content d-flex flex-row align-items-center justify-content-start">
+            <div class="logo_container">
+              <a href="/">
+                <div class="logo_text"><span><img src="assets/images/logo1.png" alt="MS TECHNOLOGYS"></span>
+                  <!--Yashva<span>nt</span>-->
+                </div>
+
+              </a>
+            </div>
+            <nav class="main_nav_contaner ml-auto">
+              <ul class="main_nav">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/">Home</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/about">About
+                    US</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/services">Services</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="/contact">Contact
+                    US</a></li>
+              </ul>
+
+              <!-- Hamburger -->
+              <div class="hamburger menu_mm">
+                <i class="fa fa-bars menu_mm" aria-hidden="true"></i>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Header Search Panel -->
+
+</header>
+<!-- Menu -->
+<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+  <div class="menu_close_container">
+    <div class="menu_close">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <nav class="menu_nav">
+    <ul class="menu_mm">
+      <li class="menu_mm"><a routerLink="/">Home</a></li>
+      <li class="menu_mm"><a routerLink="/about">About Us</a></li>
+      <li class="menu_mm"><a routerLink="/services">Services</a></li>
+      <li class="menu_mm"><a routerLink="/contact">Contact US</a></li>
+    </ul>
+  </nav>
+</div>

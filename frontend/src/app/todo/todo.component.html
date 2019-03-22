@@ -1,0 +1,39 @@
+<main class="app-content">
+  <div class="app-title">
+    <div>
+      <h1><i class="fa fa-th-list"></i> Todo List</h1>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div id="ajaxResults" class="clearcontent"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="btn-group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#todo-add"> Add New
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-body">
+          <table id="todo-list" datatable [dtOptions]="dtOptions" class="row-border hover">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal Start-->
