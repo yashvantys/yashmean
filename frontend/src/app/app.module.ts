@@ -14,23 +14,13 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { AdminHeaderComponent } from './_layout/admin-header/admin-header.component'
 import { AdminFooterComponent } from './_layout/admin-footer/admin-footer.component'
 import { AdminLayoutComponent } from './_layout/admin-layout/admin-layout.component'
-import { UsersComponent } from './users/users.component'
 import { DataTablesModule } from 'angular-datatables'
-import { UsersService } from './services/users.service'
 import { ContentsService } from './services/contents.service'
 import { ContentComponent } from './content/content.component'
 import { AuthInterceptorService } from './authInterceptor.service'
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-import { HeaderComponent } from './_layout/front/header/header.component';
-import { FooterComponent } from './_layout/front/footer/footer.component';
-import { MainLayoutComponent } from './_layout/front/main-layout/main-layout.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
-import { ContactService } from './services/contact.service';
-import { TodoComponent } from './todo/todo.component';
-import { TodoService } from './services/todo.service'
+
 
 
 @NgModule({
@@ -41,16 +31,8 @@ import { TodoService } from './services/todo.service'
     AdminHeaderComponent,
     AdminFooterComponent,
     AdminLayoutComponent,
-    UsersComponent,
     ContentComponent,
-    HeaderComponent,
-    FooterComponent,
-    MainLayoutComponent,
-    HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    ServicesComponent,
-    TodoComponent
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +45,7 @@ import { TodoService } from './services/todo.service'
     FroalaEditorModule,
     FroalaViewModule
   ],
-  providers: [ApiService, AuthService, AuthGuard, UsersService, ContentsService, ContactService, TodoService, {
+  providers: [ApiService, AuthService, AuthGuard, ContentsService, {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
     multi: true
