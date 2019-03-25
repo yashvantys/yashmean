@@ -1,8 +1,8 @@
-const Todo = require('../../models/Todo.js');
+const Content = require('../../models/Content.js');
 
 // get All Todo list
 exports.todo_get_all = async (req, res, next) => {
-    console.log('inside');
+
     try {
         var result = []
         // get values from req
@@ -19,7 +19,6 @@ exports.todo_get_all = async (req, res, next) => {
         if (direction == 'desc')
             orderbyasc = -1
         var query = {}
-
         if (search != '')
             query = {
                 $or: [{
@@ -31,8 +30,9 @@ exports.todo_get_all = async (req, res, next) => {
 
         var sortColumn = {}
         sortColumn[sort_column] = orderbyasc
-        var todos = await Todo.find(query, '-__v').sort(sortColumn).limit(limit).skip(start)
-        var TotalTodos = await Todo.find(query).count({})
+        var todos = await Content.find({});
+        console.log("records:" + todos);
+        var TotalTodos = await Todo.find({}).count({})
         res.send({
             statusCode: 200,
             message: 'success',
